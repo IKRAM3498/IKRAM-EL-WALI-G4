@@ -383,6 +383,24 @@ def intersection(liste1, liste2):
 print(intersection([1, 6, 2, 4], [2, 7, 6]))
 ```
 ````
+### correction 
+```
+def intersection(l1,l2):
+    l3=[]
+    for e in l1:
+        if e in l2 and e not in l3:
+            l3.append(e)
+    return l3
+
+
+
+
+l1=[2,4,5,2,7,6]
+l2=[5,8,2,3,2]
+print("A inter B ", intersection(l1,l2))
+```
+
+````
 
 ```{admonition} Exercice 4.3 : Union de listes
 :name: ex4.3
@@ -526,7 +544,7 @@ Bien entendu, pour pouvoir utiliser `zip()`, il faut que les listes soient de mÃ
 2. [Intersection de listes](ex4.2)
 3. [Union de listes](ex4.3)
 ### correction
-```def argmax(l):
+``` def argmax(l):
     k, m= 0, l[0]
     for i,e in enumerate(l[1:]):
         if e>m:
